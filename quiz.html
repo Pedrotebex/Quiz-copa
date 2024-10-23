@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>Quiz sobre Copas do Mundo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Quiz - Copas do Mundo</title>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-  <div id="main" class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-    <header>
-      <h1 class="text-2xl font-bold mb-4">Quiz sobre Copas do Mundo</h1>
-    </header>
-    <main>
-      <div class="question-container mb-4">
-        <div class="question">
-          <p id="question-text" class="text-lg"></p>
+
+<body class="font-montserrat text-white bg-gradient-to-r from-green-500 to-yellow-500 flex items-center justify-center h-screen">
+    <div class="flex flex-wrap p-8 rounded-lg text-center w-full max-w-lg">
+        <h1 class="text-3xl font-bold mb-4">Quiz sobre Copas do Mundo</h1>
+        
+        <!-- Barra de Progresso -->
+        <div id="progress-container" style="width: 100%; background-color: #e0e0e0; border-radius: 5px; overflow: hidden;">
+            <div id="progress-bar" style="width: 0%; height: 10px; background-color: green;"></div>
         </div>
-        <div class="answer-options" id="answer-options" class="mt-4">
-          <!-- As opções de resposta serão geradas aqui -->
+
+        <div id="question-container" class="flex flex-col items-center">
+            <p id="question" class="text-xl mb-4"></p>
+            <div id="answer-buttons" class="flex flex-col space-y-2 w-full">
+                <!-- As opções de resposta serão geradas dinamicamente aqui -->
+            </div>
+            <button id="check-answer" class="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300 mt-4 hidden">Checar Resposta</button>
+            <button id="next-button" class="bg-blue-950 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300 mt-4 hidden">Próxima Pergunta</button>
         </div>
-      </div>
-    </main>
-    <footer class="flex justify-between">
-      <button id="check-answer" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">Verificar Resposta</button>
-      <button id="next-question" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" style="display: none;">Próxima Pergunta</button>
-    </footer>
-  </div>
-  <script src="questions.js"></script>
-  <script src="app.js"></script>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="./questions.js"></script>
 </body>
+
 </html>

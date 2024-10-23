@@ -5,7 +5,11 @@ module.exports = {
     './src/**/*.{js}', // Se você tiver scripts JS na pasta src
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
