@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
     <title>Tela de Início - Quiz sobre Copas do Mundo</title>
 </head>
 
-<body class="bg-gradient-to-r from-green-500 to-yellow-500 flex items-center justify-center h-screen">
-    <div class="bg-white flex p-8 rounded-lg shadow-lg text-center">
-        <div class="flex flex-col justify-center gap-8">
-            <h1 class="text-2xl font-bold">Bem-vindo ao Quiz sobre Copas do Mundo!</h1>
-            <p class="">Teste seus conhecimentos sobre as Copas do Mundo de Futebol.</p>
-            <button id="start-quiz" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Iniciar
-                Quiz</button>
-        </div>
-        <img src="./IMG/8861317.png" alt="Imagem de Copas do Mundo" class="mb-4 w-48 mx-auto">
+<body class="font-montserrat text-white bg-gradient-to-r from-green-500 to-yellow-500 flex items-center justify-center h-screen relative overflow-hidden">
+    <div class="inset-0 bg-cover bg-center"></div>
+    <div class="flex flex-col justify-center items-center w-4/5 h-auto md:w-2/4 p-8 bg-white bg-opacity-30 rounded-lg shadow-lg z-10">
+        <h1 class="text-4xl font-bold mb-4 text-center">Bem-vindo ao Quiz sobre Copas do Mundo!</h1>
+        
+        <dotlottie-player class="w-52 md:w-56 lg:w-72" src="https://lottie.host/d4b065ea-b887-41e6-a5a1-b23a71633c1b/8cdAEVQSpn.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        
+        <p class="text-lg mb-6 text-center">Teste seus conhecimentos sobre as Copas do Mundo de Futebol.</p>
+        <button id="start-quiz" class="bg-blue-950 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-md">Iniciar Quiz</button>
     </div>
+
     <script>
         document.getElementById('start-quiz').addEventListener('click', () => {
             window.location.href = 'quiz.html'; // Redireciona para a tela do quiz
